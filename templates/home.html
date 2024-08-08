@@ -3,19 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brainwave - Home</title>
+    <link href="/static/css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css">
 </head>
 <body>
-    <h1>Home</h1>
-    <div>
-        <a href="/course?subject=english">English</a>
-        <a href="/course?subject=maths">Maths</a>
-        <a href="/course?subject=physics">Physics</a>
-        <a href="/course?subject=chemistry">Chemistry</a>
-    </div>
-    <a href="/meeting">Meeting</a>
-    <a href="/test">Test</a>
-    <a href="/profile">profile</a>
-    <a href="/class">class</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h1>Brainwave</h1>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/meeting">Meeting</a></li>
+            <li><a href="/test">Test</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/class">Class</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="background">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Welcome to Brainwave</h1>
+            <p>Select a course to start learning:</p>
+            <div class="courses">
+                <a href="/course?subject=python" class="course-card">Python</a>
+                <a href="/course?subject=javascript" class="course-card">JavaScript</a>
+                <a href="/course?subject=data-science" class="course-card">Data Science</a>
+                <a href="/course?subject=machine-learning" class="course-card">Machine Learning</a>
+            </div>
+            <section class="additional-info">
+                <h2>Popular Courses</h2>
+                <div class="course-list">
+                    <div class="course-item">Web Development</div>
+                    <div class="course-item">React.js</div>
+                    <div class="course-item">Django</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Brainwave. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
 </body>
 </html>

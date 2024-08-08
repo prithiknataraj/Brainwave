@@ -4,22 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Brainwave - Login</title>
+    <link href="/static/css/login.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <h1>
-        Login Page
-    </h1>
-    <form action="/login" method="post">
-        <input type="text" placeholder="email id" name="email" required>
-        <input type="password" placeholder="password" name="password" required>
-        {% if error_message %}
-        <p>{{error_message}}</p>
-        {% endif %}
-        <button type="submit">Login</button>
-    </form>
-    <a href="/signup">new user? Sign Up</a>
+    <div id="container">
+        <div id="left-div">
+            <a href="/">
+                <h1>
+                    <i class='bx bxs-brain bx-tada' style='color:#ffffff'></i>
+                    Brainwave
+                </h1>
+            </a>
+        </div>
+        <div id="right-div">
+            <h1>Login</h1>
+            <form action="/login" method="post">
+                <label for="email">Email ID:</label>
+                <input type="text" id="email" placeholder="Email ID" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Password" name="password" required>
+                {% if error_message %}
+                <p id="error">{{error_message}}</p>
+                {% endif %}
+                <button type="submit">Login</button>
+            </form>
+            <a href="/signup">New user? Sign Up</a>
+        </div>
+    </div>
 </body>
 
 </html>
